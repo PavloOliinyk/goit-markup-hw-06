@@ -63,7 +63,7 @@
       <section class="hero overlay">
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="hero-btn" type="button" data-modal-open>
+          <button class="hero-btn modal-open" type="button" data-modal-open>
             Заказать услугу
           </button>
         </div>
@@ -465,6 +465,27 @@
               </a>
             </li>
           </ul>
+        </div>
+
+        <div class="signup">
+          <form action="" name="signup-form">
+            <label class="signup-title subtitle" for="email">
+              Подпишитесь на рассылку
+            </label>
+            <input
+              class="signup-input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="E-mail"
+            />
+            <button class="signup-btn modal-open" type="button" data-modal-open>
+              Подписаться
+              <svg class="signup-icon" width="24" height="24">
+                <use href="./images/sprite.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
