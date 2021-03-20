@@ -73,8 +73,9 @@ img {
   top: 50%;
   left: 50%;
 
-  width: 528px;
-  height: 581px;
+  min-width: 528px;
+  min-height: 581px;
+  padding: 40px;
 
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -107,6 +108,58 @@ img {
 
 .modal-icon-close {
   fill: currentColor;
+}
+
+.modal .signup-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 55px;
+}
+
+.form-submit {
+  margin-bottom: 20px;
+}
+
+.form-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+
+  color: var(--secondaryTextColor);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  outline: 1px solid red;
+}
+
+.form-field-title {
+  margin-bottom: 4px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: var(--primaryTextColor);
+}
+
+.form-subscription {
+  margin-bottom: 30px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  text-align: center;
+}
+
+.form-contract-link {
+  color: var(--activeLinkColor);
 }
 
 .list {

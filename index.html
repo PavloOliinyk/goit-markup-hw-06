@@ -468,7 +468,7 @@
         </div>
 
         <div class="signup">
-          <form action="" name="signup-form">
+          <form name="signup-form">
             <label class="signup-title subtitle" for="email">
               Подпишитесь на рассылку
             </label>
@@ -486,7 +486,7 @@
             >
               Подписаться
               <svg class="signup-icon" width="24" height="24">
-                <use href="./images/sprite.svg#icon-send"></use>
+                <use href="./images/icons.svg#send"></use>
               </svg>
             </button>
           </form>
@@ -500,6 +500,42 @@
           <svg class="modal-icon-close" width="11" height="11">
             <use href="./images/sprite.svg#modal-close"></use>
           </svg>
+        </button>
+        <form class="form-submit">
+          <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
+
+          <div class="form-field">
+            <label class="form-field-title" for="username"> Имя </label>
+            <input type="name" name="username" id="username" />
+          </div>
+
+          <div class="form-field">
+            <label class="form-field-title" for="tel"> Телефон </label>
+            <input type="tel" name="tel" id="tel" />
+          </div>
+
+          <div class="form-field">
+            <label class="form-field-title" for="e-mail"> Почта </label>
+            <input type="email" name="e-mail" id="e-mail" />
+          </div>
+
+          <div class="form-field">
+            <label class="form-field-title" for="comment"> Комментарий </label>
+            <textarea
+              name="comment"
+              id="comment"
+              cols=""
+              rows="10"
+              placeholder="Введите текст"
+            ></textarea>
+          </div>
+        </form>
+        <p class="form-subscription">
+          Соглашаюсь с рассылкой и принимаю
+          <a class="form-contract-link" href=""> Условия договора </a>
+        </p>
+        <button class="signup-btn" name="submit-btn" type="submit">
+          Отправить
         </button>
       </div>
     </div>

@@ -372,9 +372,33 @@
             </li>
           </ul>
         </div>
+
+        <div class="signup">
+          <form name="signup-form">
+            <label class="signup-title subtitle" for="email">
+              Подпишитесь на рассылку
+            </label>
+            <input
+              class="signup-input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="E-mail"
+            />
+            <button
+              class="signup-btn modal-open"
+              type="button"
+              data-modal-portfolio
+            >
+              Подписаться
+              <svg class="signup-icon" width="24" height="24">
+                <use href="./images/icons.svg#send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
 
-    <script src="./js/modal.js"></script>
   </body>
 </html>
