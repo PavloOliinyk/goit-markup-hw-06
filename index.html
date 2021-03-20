@@ -502,26 +502,52 @@
           </svg>
         </button>
         <form class="form-submit">
-          <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
+          <b class="form-title">Оставьте свои данные, мы вам перезвоним</b>
 
           <div class="form-field">
             <label class="form-field-title" for="username"> Имя </label>
-            <input type="name" name="username" id="username" />
+            <div class="input-wrapper">
+              <input
+                class="form-input"
+                type="name"
+                name="username"
+                id="username"
+              />
+              <svg class="form-icon" width="12" height="12">
+                <use href="./images/icons.svg#person"></use>
+              </svg>
+            </div>
           </div>
 
           <div class="form-field">
             <label class="form-field-title" for="tel"> Телефон </label>
-            <input type="tel" name="tel" id="tel" />
+            <div class="input-wrapper">
+              <input class="form-input" type="tel" name="tel" id="tel" />
+              <svg class="form-icon" width="13" height="13">
+                <use href="./images/icons.svg#phone"></use>
+              </svg>
+            </div>
           </div>
 
           <div class="form-field">
             <label class="form-field-title" for="e-mail"> Почта </label>
-            <input type="email" name="e-mail" id="e-mail" />
+            <div class="input-wrapper">
+              <input
+                class="form-input"
+                type="email"
+                name="e-mail"
+                id="e-mail"
+              />
+              <svg class="form-icon" width="15" height="12">
+                <use href="./images/icons.svg#mail"></use>
+              </svg>
+            </div>
           </div>
 
           <div class="form-field">
             <label class="form-field-title" for="comment"> Комментарий </label>
             <textarea
+              class="form-comment"
               name="comment"
               id="comment"
               cols=""
@@ -529,14 +555,18 @@
               placeholder="Введите текст"
             ></textarea>
           </div>
+
+          <div class="form-subscription-wrapper">
+            <input type="checkbox" name="agreement" id="agreement" />
+            <label class="form-subscription" for="agreement">
+              Соглашаюсь с рассылкой и принимаю
+              <a class="form-contract-link" href=""> Условия договора </a>
+            </label>
+          </div>
+          <button class="signup-btn" name="submit-btn" type="submit">
+            Отправить
+          </button>
         </form>
-        <p class="form-subscription">
-          Соглашаюсь с рассылкой и принимаю
-          <a class="form-contract-link" href=""> Условия договора </a>
-        </p>
-        <button class="signup-btn" name="submit-btn" type="submit">
-          Отправить
-        </button>
       </div>
     </div>
 
