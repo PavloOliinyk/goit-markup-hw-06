@@ -103,6 +103,8 @@ img {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
 
+  transition: var(--transitionColor);
+
   cursor: pointer;
 }
 
@@ -110,8 +112,8 @@ img {
   fill: currentColor;
 }
 
-.modal-icon:hover > .modal-icon-close,
-.modal-icon:focus > .modal-icon-close {
+.modal-icon:hover,
+.modal-icon:focus {
   color: var(--activeLinkColor);
 }
 
@@ -137,6 +139,8 @@ img {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
+
+  color: var(--primaryTextColor);
 }
 
 .input-wrapper {
@@ -146,8 +150,8 @@ img {
 
 .form-icon {
   position: absolute;
-  top: 14px;
-  left: 15px;
+  top: 11px;
+  left: 12px;
 
   fill: currentColor;
 }
@@ -159,8 +163,6 @@ img {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-
-  color: var(--primaryTextColor);
 }
 
 .form-input {
@@ -170,11 +172,20 @@ img {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input:focus,
 .form-comment:focus {
-  outline-color: var(--activeLinkColor);
+  border: 1px solid var(--activeLinkColor);
+  outline: none;
+}
+
+.form-input + .form-icon {
+  color: var(--secondaryTextColor);
+
+  transition: var(--transitionColor);
 }
 
 .form-input:focus + .form-icon {
@@ -186,6 +197,8 @@ img {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  resize: none;
 }
 
 .form-comment::placeholder {
@@ -197,21 +210,55 @@ img {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.form-subscription-wrapper {
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
+.form-subscription-input {
+  /* -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; */
+
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
-.form-subscription {
+.form-subscription-input:checked + .form-subsription-icon {
+  background-color: var(--activeLinkColor);
+  border: var(--activeLinkColor);
+  fill: var(--whiteTextColor);
+}
+
+.form-subsription-icon {
+  fill: none;
+  margin-right: 7px;
+  border: 2px solid var(--secondaryTextColor);
+  border-radius: 2px;
+}
+
+.form-subscription-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
-  margin-left: 8px;
 }
+
+/* .form-subscription-label > * {
+  outline: 1px solid red;
+} */
 
 .form-contract-link {
   color: var(--activeLinkColor);
+  margin-left: 5px;
 }
 
 .list {
