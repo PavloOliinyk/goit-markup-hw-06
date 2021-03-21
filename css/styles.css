@@ -252,11 +252,9 @@ img {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
-}
 
-/* .form-subscription-label > * {
-  outline: 1px solid red;
-} */
+  cursor: pointer;
+}
 
 .form-contract-link {
   color: var(--activeLinkColor);
